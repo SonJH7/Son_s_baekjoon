@@ -1,22 +1,19 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
+#include <vector> 
+#include <string>
 using namespace std;
 
-int main()
-{   
-    ios_base::sync_with_stdio(false); 
-    cin.tie(NULL); 
+int main(){
     int a,b,c;
     cin >> a >> b >> c;
-    int e= a*b*c;
-    vector <int> d(10,0);
-    for(int i=0; e>0; i++){
-        d[e%10]++;
-        e/=10;
+    string d = to_string(a * b * c);
+    vector<int> arr(10,0);
+    for(int i=0; i<d.length(); i++){
+        arr[d[i]-'0']++;
     }
-    
-    for(int i=0; i<10; i++)
-        cout << d[i] << "\n";
+    for(int i=0; i<10; i++){
+        cout << arr[i] << "\n";
+    }
     return 0;
+    
 }
