@@ -4,16 +4,11 @@
 using namespace std;
 
 int solution(int n) {
-    int answer = 0;
-    int a[10]= {1,2,6,24,120,720,5040,40320,362880,3628800};
-    for(int i=0; i<10; i++){
-         if(n<a[i]){
-            answer = i;
-            break;
-         }
+    int answer = 0, i=1;
+    while(i<=n){
+        answer++;
+        i*=answer;
     }
-    if(answer ==0)
-        answer = 10;
-    
+    answer--;
     return answer;
 }
