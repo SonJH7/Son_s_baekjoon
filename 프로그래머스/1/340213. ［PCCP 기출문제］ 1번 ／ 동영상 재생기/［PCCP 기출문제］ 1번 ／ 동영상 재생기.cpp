@@ -1,6 +1,5 @@
 #include <string>
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
@@ -52,7 +51,6 @@ string solution(string video_len, string pos, string op_start, string op_end, ve
         if( ops<= p && p < ope){
             p = ope;
         }
-        cout << p << "\n";
         if(p>v)
             p=v;
         if( p<0)
